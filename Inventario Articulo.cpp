@@ -13,16 +13,15 @@ void altas()
 	cin>>opc;
 	system("cls");
 	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
+	{}
+	if(opc==codigo[n])
 		{
 			cout<<"Inserte el numero a sumar"<<endl;
 			cin>>s;
 			cantidad[n]=cantidad[n]+s;
 		}
 		else
-		{cout<<"codigo no encontrado"<<endl;}
-	}
+		{cout<<"codigo no encontrado,presione enter"<<endl;getch();}
 	system("cls");
 }
 void bajas()
@@ -31,16 +30,15 @@ void bajas()
 	cin>>opc;
 	system("cls");
 	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
+	{}
+	if(opc==codigo[n])
 		{
 			cout<<"Inserte el numero a restar"<<endl;
 			cin>>s;
 			cantidad[n]=cantidad[n]-s;
 		}
 		else
-		{cout<<"codigo no encontrado"<<endl;}
-	}
+		{cout<<"codigo no encontrado,presione enter"<<endl;getch();}
 	system("cls");
 }
 void cambiar()
@@ -49,8 +47,8 @@ void cambiar()
 	cin>>opc;
 	system("cls");
 	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
+	{}
+	if(opc==codigo[n])
 		{
 					cout<<"Inserte los nombre"<<endl;
 					cout<<"Cantidad: "<<n<<endl;
@@ -58,7 +56,6 @@ void cambiar()
 		}
 		else
 		{cout<<"codigo no encontrado"<<endl;}
-	}
 	system("cls");
 }
 void imprimir()
@@ -111,7 +108,7 @@ void Bajas()
 					codigo[opc]=0;
 					cantidad[opc]=0;
 					precio[opc]=0;
-					producto[opc][20]=0;
+					producto[opc][20]='0';
 					system("cls");
 		}
 }
@@ -121,20 +118,19 @@ void Cambiar()
 	cin>>opc;
 	system("cls");
 	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
+	{}
+	if(opc==codigo[n])
 		{
-					cout<<"Inserte los nombre de productos, precios y cantidades de 4 productos"<<endl;
-					cout<<"Producto: "<<n<<endl;
-					cin.getline(producto[n],20); cin.getline(producto[n],20);
+					cout<<"Inserte el los datos del codigo escogido"<<endl;
+					cout<<"Producto: "<<endl;
+					cin.getline(producto[opc],20); cin.getline(producto[opc],20);
 					cout<<"Precio: "<<n<<endl;
-					cin>>precio[n];
+					cin>>precio[opc];
 					cout<<"Cantidad: "<<n<<endl;
-					cin>>cantidad[n];
+					cin>>cantidad[opc];
 		}
 		else
-		{cout<<"codigo no encontrado"<<endl;}
-	}
+		{cout<<"codigo no encontrado, presione enter para continuar"<<endl;getch();}
 	system("cls");
 }
 void Inventario()
@@ -172,7 +168,7 @@ void Salir()
 main()
 {
 	cout<<"Programa para altas, bajas e imprimir"<<endl;
-	cout<<"Inserte los codigos, nombre de productos, precios y cantidades de 3 productos"<<endl;
+	cout<<"Inserte los codigos, nombre de productos, precios y cantidades de 4 productos"<<endl;
 				for(n=1; n<=4; n=n+1)
 				{
 					cout<<"Codigo: "<<n<<endl;
@@ -188,7 +184,7 @@ main()
 				system("cls");
 	while(salir==0)
 	{
-		cout<<"Inserte 1 si deseas ir al Inventario \nInserte 2 si deseas ir al Articulos \ninserte 3 si deseas imprimir \n inserte 4 si desea salir"<<endl;
+		cout<<"Inserte 1 si deseas ir al menu de Inventario \nInserte 2 si deseas ir al menu de Articulos \nInserte 3 si deseas Imprimir \n inserte 4 si desea Salir"<<endl;
 		cin>>op;
 		system("cls");
 		switch(op)
