@@ -69,7 +69,7 @@ void imprimir()
 					cout<<"Codigo: "<<codigo[n]<<endl;
 					cout<<"Nombre: "<<producto[n]<<endl;
 					cout<<"Precio: "<<precio[n]<<endl;
-					cout<<"Cantidad"<<cantidad[n]<<endl;
+					cout<<"Cantidad: "<<cantidad[n]<<"\n"<<endl;
 				}
 }
 void Altas()
@@ -77,24 +77,23 @@ void Altas()
 	cout<<"Inserte el codigo a añadir"<<endl;
 	cin>>opc;
 	for(n=1; n<=15; n=n+1)
-	{
+	{}
 		if(opc==codigo[n])
 		{
 			cout<<"codigo ya existente"<<endl;
 		}
 		else
 		{cout<<"Inserte el codigo, nombre de producto, precio y cantidad de el producto nuevo"<<endl;
-					cout<<"Codigo: "<<n<<endl;
-					cin>>codigo[opc];
-					cout<<"Producto: "<<n<<endl;
+					codigo[opc]=opc;
+					cout<<"Producto: "<<endl;
 					cin.getline(producto[opc],20); cin.getline(producto[opc],20);
-					cout<<"Precio: "<<n<<endl;
+					cout<<"Precio: "<<endl;
 					cin>>precio[opc];
-					cout<<"Cantidad: "<<n<<endl;
+					cout<<"Cantidad: "<<endl;
 					cin>>cantidad[opc];
 					system("cls");
 		}
-	}
+	
 	system("cls");
 }
 void Bajas()
@@ -102,8 +101,8 @@ void Bajas()
 	cout<<"Inserte el codigo a quitar"<<endl;
 	cin>>opc;
 	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
+	{}	
+	if(opc==codigo[n])
 		{
 			cout<<"codigo ya existente"<<endl;
 		}
@@ -115,7 +114,6 @@ void Bajas()
 					producto[opc][20]=0;
 					system("cls");
 		}
-	}	
 }
 void Cambiar()
 {
@@ -180,7 +178,7 @@ main()
 					cout<<"Codigo: "<<n<<endl;
 					cin>>codigo[n];
 					cout<<"Producto: "<<n<<endl;
-					cin.getline(producto[n],20); cin.getline(producto[n],20);
+					cin.getline(producto[n],20); cin.getline(producto[n],20); 
 					cout<<"Precio: "<<n<<endl;
 					cin>>precio[n];
 					cout<<"Cantidad: "<<n<<endl;
