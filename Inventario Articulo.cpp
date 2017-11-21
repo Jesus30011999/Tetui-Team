@@ -157,6 +157,7 @@ void Articulos()
 {
 	cout<<"Menu de Articulos"<<endl;
 	cout<<"Introduzca 1 para altas\nIntroduzca 2 para bajas\nIntroduzca 3 para cambiar"<<endl;
+	cin>>op1;
 	switch(op1){
 		case 1:{Altas();break;}
 		case 2:{Bajas();break;}
