@@ -4,9 +4,10 @@
 #include <conio.h>
 #include <string>
 using namespace std;
-int salir,opc,op,op1,s,n,codigo[15],cantidad[15];
+int salir,opc,op,op1,s,n,band,codigo[15],cantidad[15];
 float precio[15];
 char producto[15][20];
+bool BA;
 void altas()
 {
 	cout<<"Inserte el codigo a cambiar"<<endl;
@@ -75,16 +76,21 @@ void imprimir()
 }
 void Altas()
 {
-	cout<<"Inserte el codigo a añadir"<<endl;
-	cin>>opc;
-	for(n=1; n<=15; n=n+1)
-	{
-		if(opc==codigo[n])
-		{
-			cout<<"codigo ya existente"<<endl;
-		}
-		else
-		{cout<<"Inserte el codigo, nombre de producto, precio y cantidad de el producto nuevo"<<endl;
+    n=1;
+	do
+	{		cout<<"Inserte el codigo que quieres agregar"<<endl;
+			cin>>opc;
+				if(opc==codigo[n] and n<=15)
+				{
+					BA=true;
+					cout<<"Dato existente"<<endl;
+					getch();
+				}
+				else
+				{
+				  
+					BA=false;
+					cout<<"Inserte el codigo, nombre de producto, precio y cantidad de el producto nuevo"<<endl;
 					codigo[opc]=opc;
 					cout<<"Producto: "<<endl;
 					cin.getline(producto[opc],20); cin.getline(producto[opc],20);
@@ -93,53 +99,72 @@ void Altas()
 					cout<<"Cantidad: "<<endl;
 					cin>>cantidad[opc];
 					system("cls");
-	}
-		
-		}
-	
-	system("cls");
+				}
+					n=n+1;
+			}
+			while(BA==true);
+		system("cls");
 }
 void Bajas()
 {
-	cout<<"Inserte el codigo a quitar"<<endl;
-	cin>>opc;
-	for(n=1; n<=15; n=n+1)
-	{if(opc==codigo[n])
-		{
-			cout<<"Inserte el codigo, nombre de producto, precio y cantidad de el producto nuevo"<<endl;
-					codigo[opc]=0;
-					cantidad[opc]=0;
-					precio[opc]=0;
-					producto[opc][20]='0';
-					system("cls");
-			
-		}
-		else
-		{
-			cout<<"codigo no existe"<<endl;
-		}}	
+	n=1;
+	do
+	{
+		cout<<"Inserte el codigo a quitar"<<endl;
+		cin>>opc;
 
+			if(opc==codigo[n] and n<=15)
+			{
+				BA=true;
+				for (int i=0; i<=20 ; ++i)
+				{
+					producto[opc][i]=0;
+				}
+				codigo[opc]=0;
+				cantidad[opc]=0;
+				precio[opc]=0;
+				cout<<"Se borraron los datos"<<endl;
+				getch();
+				system("cls");
+				
+						
+						
+			}
+			else
+			{
+					  
+				BA=false;
+				cout<<"Dato no existente"<<endl;
+				getch();
+				system("cls");
+			}
+			n=n+1;
+		}
+		while(BA==false);
 }
 void Cambiar()
 {
+
 	cout<<"Inserte el codigo a cambiar"<<endl;
 	cin>>opc;
 	system("cls");
 	for(n=1; n<=15; n=n+1)
 	{
-		if(opc==codigo[n])
+	if(opc==codigo[n])
 		{
-					cout<<"Inserte el los datos del codigo escogido"<<endl;
-					cout<<"Producto: "<<endl;
-					cin.getline(producto[opc],20); cin.getline(producto[opc],20);
-					cout<<"Precio: "<<n<<endl;
-					cin>>precio[opc];
-					cout<<"Cantidad: "<<n<<endl;
-					cin>>cantidad[opc];
+				cout<<"Inserte los datos del codigo escogido"<<endl;
+				cout<<"Producto: "<<endl;
+				cin.getline(producto[opc],20); cin.getline(producto[opc],20);
+				cout<<"Precio: "<<n<<endl;
+				cin>>precio[opc];
+				cout<<"Cantidad: "<<n<<endl;
+				cin>>cantidad[opc];
+				cout<<"Se cambiaron los datos"<<endl;
+				getch();
+				system("cls");
 		}
 		else
-		{cout<<"codigo no encontrado, presione enter para continuar"<<endl;}
-	}
+		{cout<<"codigo no encontrado"<<endl;}}
 	
 	system("cls");
 }
