@@ -76,10 +76,10 @@ void imprimir()
 }
 void Altas()
 {
-    n=1;
 	do
 	{		cout<<"Inserte el codigo que quieres agregar"<<endl;
 			cin>>opc;
+			n=opc;
 				if(opc==codigo[n] and n<=15)
 				{
 					BA=true;
@@ -107,19 +107,16 @@ void Altas()
 }
 void Bajas()
 {
-	n=1;
 	do
 	{
 		cout<<"Inserte el codigo a quitar"<<endl;
 		cin>>opc;
+			n=opc;
 
 			if(opc==codigo[n] and n<=15)
 			{
 				BA=true;
-				for (int i=0; i<=20 ; ++i)
-				{
-					producto[opc][i]=0;
-				}
+				*producto[opc]=0;
 				codigo[opc]=0;
 				cantidad[opc]=0;
 				precio[opc]=0;
@@ -144,29 +141,35 @@ void Bajas()
 }
 void Cambiar()
 {
-
+do
+{
 	cout<<"Inserte el codigo a cambiar"<<endl;
 	cin>>opc;
-	system("cls");
-	for(n=1; n<=15; n=n+1)
-	{
-	if(opc==codigo[n])
-		{
-				cout<<"Inserte los datos del codigo escogido"<<endl;
-				cout<<"Producto: "<<endl;
-				cin.getline(producto[opc],20); cin.getline(producto[opc],20);
-				cout<<"Precio: "<<n<<endl;
-				cin>>precio[opc];
-				cout<<"Cantidad: "<<n<<endl;
-				cin>>cantidad[opc];
-				cout<<"Se cambiaron los datos"<<endl;
-				getch();
-				system("cls");
-		}
-		else
-		{cout<<"codigo no encontrado"<<endl;}}
+			n=opc;
+				if(opc==codigo[n] and n<=15)
+				{
+					BA=true;
+					cout<<"Inserte el codigo, nombre de producto, precio y cantidad de el producto nuevo"<<endl;
+					codigo[opc]=opc;
+					cout<<"Producto: "<<endl;
+					cin.getline(producto[opc],20); cin.getline(producto[opc],20);
+					cout<<"Precio: "<<endl;
+					cin>>precio[opc];
+					cout<<"Cantidad: "<<endl;
+					cin>>cantidad[opc];
+					system("cls");
+				}
+				else
+				{
+					BA=false;
+					cout<<"Dato no existente"<<endl;
+					getch();		  
+					
+				}
+					n=n+1;
+			}
+			while(BA==false);
 	
-	system("cls");
 }
 void Inventario()
 {
