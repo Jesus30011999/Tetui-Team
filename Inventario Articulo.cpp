@@ -10,59 +10,99 @@ char producto[15][20];
 bool BA;
 void altas()
 {
-	cout<<"Inserte el codigo a cambiar"<<endl;
-	cin>>opc;
-	system("cls");
-	for(n=1; n<=15; n=n+1)
-	{if(opc==codigo[n])
-		{
-			cout<<"Inserte el numero a sumar"<<endl;
-			cin>>s;
-			cantidad[opc]=cantidad[opc]+s;
-			cout<<"Se le sumo: "<<s<<endl;
-		}
-		else
-		{cout<<"codigo no encontrado,presione enter"<<endl;}
-}
+	cout<<"Usted a seleccionado la opcion de altas en el inventario\n"<<endl;
+do
+	{
+		cout<<"Inserte el codigo que desea para incrementar la cantidad del producto\n"<<endl;
+		cin>>opc;
+		n=opc;
+		system("cls");
+			if(opc=codigo[n] and n>=1 and n<=15)
+			{
+				BA=true;
+				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
+				cout<<"Inserte el numero a sumar"<<endl;
+				cin>>s;
+				cantidad[opc]=cantidad[opc]+s;
+				cout<<"Su cantidad ahora es: "<<cantidad[opc]<<"\nPresione enter para continuar"<<endl;getch();
+			}
 	
+			else
+			{		  
+				BA=false;
+				cout<<"Dato no existente,presione enter para repetir"<<endl;
+				getch();
+				system("cls");
+			}
+			n=n+1;
+		}
+		while(BA==false);
 	
 	system("cls");
 }
 void bajas()
 {
-	cout<<"Inserte el codigo a cambiar"<<endl;
-	cin>>opc;
-	system("cls");
-	for(n=1; n<=15; n=n+1)
-	{	if(opc==codigo[n])
-		{
-			cout<<"Inserte el numero a restar"<<endl;
-			cin>>s;
-			cantidad[opc]=cantidad[opc]-s;
-			cout<<"Se le resto: "<<s<<endl;
+cout<<"Usted a seleccionado la opcion de bajas en el inventario\n"<<endl;
+do
+	{
+		cout<<"Inserte el codigo que desea para reducir la cantidad de producto\n"<<endl;
+		cin>>opc;
+		n=opc;
+		system("cls");
+			if(opc=codigo[n] and n>=1 and n<=15)
+			{
+				BA=true;
+				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
+				cout<<"Inserte el numero a restar"<<endl;
+				cin>>s;
+				cantidad[opc]=cantidad[opc]-s;
+				cout<<"Su cantidad ahora es: "<<cantidad[opc]<<"\nPresione enter para continuar"<<endl;getch();
+			}
+	
+			else
+			{		  
+				BA=false;
+				cout<<"Dato no existente,presione enter para repetir"<<endl;
+				getch();
+				system("cls");
+			}
+			n=n+1;
 		}
-		else
-		{cout<<"codigo no encontrado,presione enter"<<endl;}}
-
+		while(BA==false);
+	
 	system("cls");
 }
 void cambiar()
 {
-	cout<<"Inserte el codigo a cambiar"<<endl;
-	cin>>opc;
-	system("cls");
-	for(n=1; n<=15; n=n+1)
+	cout<<"Usted a seleccionado la opcion de bajas en el inventario\n"<<endl;
+do
 	{
-	if(opc==codigo[n])
-		{
-					cout<<"Inserte la cantidad que quiere poner"<<endl;
-					cout<<"Cantidad: "<<opc<<endl;
-					cin>>cantidad[n];
+		cout<<"Inserte el codigo que desea para cambiar la cantidad de producto\n"<<endl;
+		cin>>opc;
+		n=opc;
+		system("cls");
+			if(opc=codigo[n] and n>=1 and n<=15)
+			{
+				BA=true;
+				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
+				cout<<"Inserte la cantidad con la que quiere reemplazar la anterior"<<endl;
+				cin>>cantidad[n];
+				cout<<"Su cantidad ahora es: "<<cantidad[opc]<<"\nPresione enter para continuar"<<endl;getch();
+			}
+	
+			else
+			{		  
+				BA=false;
+				cout<<"Dato no existente,presione enter para repetir"<<endl;
+				getch();
+				system("cls");
+			}
+			n=n+1;
 		}
-		else
-		{cout<<"codigo no encontrado"<<endl;}}
+		while(BA==false);
 	
 	system("cls");
+
 }
 void imprimir()
 {
@@ -199,6 +239,7 @@ void Inventario()
 	cout<<"Menu del Inventario"<<endl;
 	cout<<"Introduzca 1 para altas\n\nIntroduzca 2 para bajas\n\nIntroduzca 3 para cambiar"<<endl;
 	cin>>op1;
+	system("cls");
 	switch(op1){
 		case 1:{altas();break;}
 		case 2:{bajas();break;}
