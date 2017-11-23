@@ -10,7 +10,7 @@ char producto[15][20];
 bool BA;
 void altas()
 {
-	cout<<"Usted a seleccionado la opcion de altas en el inventario\n"<<endl;
+	cout<<"//Usted a seleccionado la opcion de altas en el inventario//\n"<<endl;
 do
 	{
 		cout<<"Inserte el codigo que desea para incrementar la cantidad del producto\n"<<endl;
@@ -42,7 +42,7 @@ do
 }
 void bajas()
 {
-cout<<"Usted a seleccionado la opcion de bajas en el inventario\n"<<endl;
+cout<<"//Usted a seleccionado la opcion de bajas en el inventario//\n"<<endl;
 do
 	{
 		cout<<"Inserte el codigo que desea para reducir la cantidad de producto\n"<<endl;
@@ -74,7 +74,7 @@ do
 }
 void cambiar()
 {
-	cout<<"Usted a seleccionado la opcion de bajas en el inventario\n"<<endl;
+	cout<<"//Usted a seleccionado la opcion de bajas en el inventario//\n"<<endl;
 do
 	{
 		cout<<"Inserte el codigo que desea para cambiar la cantidad de producto\n"<<endl;
@@ -106,7 +106,7 @@ do
 }
 void imprimir()
 {
-
+	cout<<"//Usted a seleccionado la opcion de impresion.//\nSe mostraran los datos de los codigos existentes.\n"<<endl;
 		for(n=1; n<=15; n=n+1)
 				{
 				
@@ -125,19 +125,21 @@ void imprimir()
 					}
 					
 				}
+				cout<<"Impresion terminada,presione enter para continuar"<<endl;getch();
+				system("cls");
 }
 void Altas()
 {
-    
+    cout<<"//Usted a seleccionado la opcion de altas en Articulos//\n"<<endl;
 	do
 	{		cout<<"Inserte el codigo que quieres agregar"<<endl;
 			cin>>opc;
 			n=opc;
-				if(opc==codigo[n] and n<=15 and n>=1)
+				if(opc==codigo[n] and n>=1 and n<=15)
 				{
 					BA=true;
 					system("cls");
-					cout<<"Dato existente"<<endl;
+					cout<<"Dato existente,presione enter para repetir"<<endl;
 					getch();
 					system("cls");
 				}
@@ -163,23 +165,23 @@ void Altas()
 }
 void Bajas()
 {
-	
+	cout<<"//Usted a seleccionado la opcion de bajas en Articulos//\n"<<endl;
 	do
 	{
 		cout<<"Inserte el codigo a quitar"<<endl;
 		cin>>opc;
 		n=opc;
 		
-			if(opc=codigo[n] and n<=15)
+			if(opc=codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				system("cls");
-				cout<<"Presione Enter para continuar "<<endl;
+				cout<<"Se borraran los datos,presione Enter para continuar "<<endl;getch();
 				*producto[opc]=0;
 				codigo[opc]=0;
 				cantidad[opc]=0;
 				precio[opc]=0;
-				cout<<"Se borraron los datos"<<endl;
+				cout<<"Se borraron los datos,presione enter para continuar"<<endl;
 				getch();
 				system("cls");		
 			}
@@ -187,7 +189,7 @@ void Bajas()
 			{		  
 				BA=false;
 				system("cls");
-				cout<<"Dato no existente"<<endl;
+				cout<<"Dato no existente,presione enter para repetir"<<endl;
 				getch();
 				system("cls");
 			}
@@ -197,13 +199,14 @@ void Bajas()
 }
 void Cambiar()
 {
+	cout<<"//Usted a seleccionado la opcion de cambio en Articulos//\n"<<endl;
 do
 	{
 		cout<<"Inserte el codigo a cambiar"<<endl;
 		cin>>opc;
 		n=opc;
 		
-			if(opc=codigo[n] and n<=15)
+			if(opc=codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				system("cls");
@@ -214,7 +217,7 @@ do
 				cin>>precio[opc];
 				cout<<"Cantidad: "<<n<<endl;
 				cin>>cantidad[opc];
-				cout<<"Se cambiaron los datos"<<endl;
+				cout<<"Se cambiaron los datos,presione enter para continuar"<<endl;
 				getch();
 				system("cls");
 				
@@ -223,7 +226,7 @@ do
 			{		  
 				BA=false;
 				system("cls");
-				cout<<"Dato no existente"<<endl;
+				cout<<"Dato no existente,presione enter para continuar"<<endl;
 				getch();
 				system("cls");
 				
@@ -236,14 +239,14 @@ do
 }
 void Inventario()
 {
-	cout<<"Menu del Inventario"<<endl;
+	cout<<"//Menu del Inventario//"<<endl;
 	cout<<"Introduzca 1 para altas\n\nIntroduzca 2 para bajas\n\nIntroduzca 3 para cambiar"<<endl;
 	cin>>op1;
 	system("cls");
 	switch(op1){
-		case 1:{altas();break;}
-		case 2:{bajas();break;}
-		case 3:{cambiar();break;}
+		case 1:{system("color 01")altas();break;}
+		case 2:{system("color 01")bajas();break;}
+		case 3:{system("color 01")cambiar();break;}
 		default:{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
 	
@@ -251,13 +254,13 @@ void Inventario()
 }
 void Articulos()
 {
-	cout<<"Menu de Articulos"<<endl;
+	cout<<"//Menu de Articulos//"<<endl;
 	cout<<"Introduzca 1 para altas\n\nIntroduzca 2 para bajas\n\nIntroduzca 3 para cambiar"<<endl;
 	cin>>op1;
 	switch(op1){
-		case 1:{Altas();break;}
-		case 2:{Bajas();break;}
-		case 3:{Cambiar();break;}
+		case 1:{system("color 03")Altas();break;}
+		case 2:{system("color 03")Bajas();break;}
+		case 3:{system("color 03")Cambiar();break;}
 		default:{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
 	
@@ -270,7 +273,7 @@ void Salir()
 main()
 {
 	system("color 0a");
-	cout<<"Programa para altas, bajas e imprimir"<<endl;
+	cout<<"//Programa para altas, bajas e imprimir//"<<endl;
 	cout<<"Inserte los codigos, nombre de productos, precios y cantidades de 4 productos"<<endl;
 				for(n=1; n<=4; n=n+1)
 				{
@@ -288,26 +291,26 @@ main()
 	while(salir==0)
 	{
 		system("color 06");
-		cout<<"Menu principal\n\n"<<endl;
+		cout<<"//Menu principal//\n"<<endl;
 		cout<<"Inserte 1 si deseas ir al menu de Inventario \n\nInserte 2 si deseas ir al menu de Articulos \n\nInserte 3 si deseas Imprimir \n\nInserte 4 si desea Salir"<<endl;
 		cin>>op;
 		system("cls");
 		switch(op)
 		{
 			case 1:
-				{Inventario();break;}
+				{system("color 05")Inventario();break;}
 			case 2:
-				{Articulos();break;}
+				{system("color 05")Articulos();break;}
 			case 3:
-				{	system("color 05");imprimir();break;}
+				{system("color 05");imprimir();break;}
 			case 4:
-				{Salir();break;}
+				{system("color 05")Salir();break;}
 			default:
 			{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
-		cout<<"deseas salir del programa? 1 para salir 0 para continuar utilizandolo"<<endl;
+		cout<<"---Deseas salir del programa? 1 para salir 0 para continuar utilizandolo---"<<endl;
 		cin>>salir;
 		system("cls");
 	}
-cout<<"el programa se cerrara"<<endl;
+cout<<"---El programa se cerrara---"<<endl;
 }
