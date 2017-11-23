@@ -244,9 +244,9 @@ void Inventario()
 	cin>>op1;
 	system("cls");
 	switch(op1){
-		case 1:{system("color 01")altas();break;}
-		case 2:{system("color 01")bajas();break;}
-		case 3:{system("color 01")cambiar();break;}
+		case 1:{system("color 01");altas();break;}
+		case 2:{system("color 01");bajas();break;}
+		case 3:{system("color 01");cambiar();break;}
 		default:{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
 	
@@ -258,9 +258,9 @@ void Articulos()
 	cout<<"Introduzca 1 para altas\n\nIntroduzca 2 para bajas\n\nIntroduzca 3 para cambiar"<<endl;
 	cin>>op1;
 	switch(op1){
-		case 1:{system("color 03")Altas();break;}
-		case 2:{system("color 03")Bajas();break;}
-		case 3:{system("color 03")Cambiar();break;}
+		case 1:{system("color 03");Altas();break;}
+		case 2:{system("color 03");Bajas();break;}
+		case 3:{system("color 03");Cambiar();break;}
 		default:{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
 	
@@ -298,13 +298,13 @@ main()
 		switch(op)
 		{
 			case 1:
-				{system("color 05")Inventario();break;}
+				{system("color 05");Inventario();break;}
 			case 2:
-				{system("color 05")Articulos();break;}
+				{system("color 05");Articulos();break;}
 			case 3:
 				{system("color 05");imprimir();break;}
 			case 4:
-				{system("color 05")Salir();break;}
+				{system("color 05");Salir();break;}
 			default:
 			{cout<<"error,presione enter para continuar"<<endl;getch();}
 		}
