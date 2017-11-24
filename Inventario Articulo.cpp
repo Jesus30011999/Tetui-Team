@@ -17,7 +17,7 @@ do
 		cin>>opc;
 		n=opc;
 		system("cls");
-			if(opc=codigo[n] and n>=1 and n<=15)
+			if(opc==codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
@@ -49,7 +49,7 @@ do
 		cin>>opc;
 		n=opc;
 		system("cls");
-			if(opc=codigo[n] and n>=1 and n<=15)
+			if(opc==codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
@@ -81,7 +81,7 @@ do
 		cin>>opc;
 		n=opc;
 		system("cls");
-			if(opc=codigo[n] and n>=1 and n<=15)
+			if(opc==codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				cout<<"Usted escogio el codigo: "<<opc<<"\nEl producto que le corresponde al codigo es: "<<producto[opc]<<"\nEn el cual tiene una cantidad de: "<<cantidad[opc]<<"\n"<<endl;
@@ -172,10 +172,11 @@ void Bajas()
 		cin>>opc;
 		n=opc;
 		
-			if(opc=codigo[n] and n>=1 and n<=15)
+			if(opc==codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				system("cls");
+				cout<<"Usted borrara el codigo: "<<opc<<"\nCon el producto: "<<producto[opc]<<"\nQue tiene el precio de: "<<precio[opc]<<"\nY la cantidad de: "<<cantidad[opc]<<"\n"<<endl;
 				cout<<"Se borraran los datos,presione Enter para continuar "<<endl;getch();
 				*producto[opc]=0;
 				codigo[opc]=0;
@@ -206,17 +207,20 @@ do
 		cin>>opc;
 		n=opc;
 		
-			if(opc=codigo[n] and n>=1 and n<=15)
+			if(opc==codigo[n] and n>=1 and n<=15)
 			{
 				BA=true;
 				system("cls");
+				cout<<"Usted cambiara el codigo: "<<opc<<"\nCon el producto: "<<producto[opc]<<"\nQue tiene el precio de: "<<precio[opc]<<"\nY la cantidad de: "<<cantidad[opc]<<"\n"<<endl;
+				cout<<"Presione enter para continuar"<<endl;getch();system("cls");
 				cout<<"Inserte los datos del codigo escogido"<<endl;
 				cout<<"Producto: "<<endl;
 				cin.getline(producto[opc],20); cin.getline(producto[opc],20);
-				cout<<"Precio: "<<n<<endl;
+				cout<<"Precio: "<<endl;
 				cin>>precio[opc];
-				cout<<"Cantidad: "<<n<<endl;
+				cout<<"Cantidad: "<<endl;
 				cin>>cantidad[opc];
+				cout<<"Usted cambio el codigo: "<<opc<<"\nCon el nuevo producto de: "<<producto[opc]<<"\nQue tiene el precio nuevo de: "<<precio[opc]<<"\nY la cantidad nueva de: "<<cantidad[opc]<<"\n"<<endl;
 				cout<<"Se cambiaron los datos,presione enter para continuar"<<endl;
 				getch();
 				system("cls");
@@ -257,6 +261,7 @@ void Articulos()
 	cout<<"//Menu de Articulos//"<<endl;
 	cout<<"Introduzca 1 para altas\n\nIntroduzca 2 para bajas\n\nIntroduzca 3 para cambiar"<<endl;
 	cin>>op1;
+	system("cls");
 	switch(op1){
 		case 1:{system("color 03");Altas();break;}
 		case 2:{system("color 03");Bajas();break;}
@@ -274,7 +279,7 @@ main()
 {
 	system("color 0a");
 	cout<<"//Programa para altas, bajas e imprimir//"<<endl;
-	cout<<"Inserte los codigos, nombre de productos, precios y cantidades de 4 productos"<<endl;
+	cout<<"Inserte los codigos, nombre de productos, precios y cantidades de 4 productos para iniciar"<<endl;
 				for(n=1; n<=4; n=n+1)
 				{
 					cout<<"Codigo: "<<n<<endl;
