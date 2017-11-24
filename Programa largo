@@ -1,0 +1,95 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string>
+using namespace std;
+int d;
+void areacirculo()
+{
+}
+void edadaproximada()
+{
+}
+void estaciones()
+{
+}
+void mayor3numeros ()
+{
+}
+void tabla8()
+{
+}
+void convertidormoneda()
+{
+}
+void paresimpares()
+{
+}
+void posnegneu()
+{
+}
+void edadwhile()
+{
+}
+void mayor3numeroswhile()
+{
+}
+void tablamultiplicar()
+{
+}
+void ganancia()
+{
+}
+void estacioneswhile()
+{
+}
+void parimparwhile()
+{
+}
+void perimetro3()
+{
+}
+void calificacionbanderas()
+{
+}
+void posiciones()
+{
+}
+void americachivas()
+{
+}
+void sumresmuldiv()
+{
+}
+void capturadatos()
+{
+}
+void calculadora()
+{
+}
+main()
+{
+	cout<<"Programas del 1 semestre"<<endl;
+	cout<<"Inserte 1 si deseas sacar el área de un circulo"<<endl;
+	cout<<"Inserte 2 si deseas sacar los años aproximados de una persona"<<endl;
+	cout<<"Inserte 3 si deseas sacar las estaciones del año"<<endl;
+	cout<<"Inserte 4 si deseas sacar el mayor de 3 numeros"<<endl;
+	cout<<"Inserte 5 si deseas sacar la tabla de 8"<<endl;
+	cout<<"Inserte 6 si deseas sacar pesos a dolares y dolares a pesos"<<endl;
+	cout<<"Inserte 7 si deseas sacar los numeros pares (2-100) e impares (1-99)"<<endl;
+	cout<<"Inserte 8 si deseas sacar los numeros positivos, negativos y neutro (while)"<<endl;
+	cout<<"Inserte 9 si deseas sacar La edad de una persona (while)"<<endl;
+	cout<<"Inserte 10 si deseas sacar el mayor de 3 numeros (while)"<<endl;
+	cout<<"Inserte 11 si deseas sacar cualquier tabla de multiplicar (while)"<<endl;
+	cout<<"Inserte 12 si deseas sacar la ganancia 6% (while)"<<endl;
+	cout<<"Inserte 13 si deseas sacar las estaciones del año (while)"<<endl;
+	cout<<"Inserte 14 si deseas sacar par impare (while)"<<endl;
+	cout<<"Inserte 15 si deseas sacar el perimetro de 3 figuras (switch)"<<endl;
+	cout<<"Inserte 16 si deseas sacar la calificacion de una materia (Banderas)"<<endl;
+	cout<<"Inserte 17 si deseas llenar 5 posiciones (arreglos)"<<endl;
+	cout<<"Inserte 18 si deseas sacar la tabla de America y Chivas (arreglo)"<<endl;
+	cout<<"Inserte 19 si deseas sacar la suma, resta, multiplicacion y division #8(arreglos)"<<endl;
+	cout<<"Inserte 20 si deseas sacar captura de datos"<<endl;
+	cout<<"Inserte 21 si deseas sacar la calculadora"<<endl;
+}
